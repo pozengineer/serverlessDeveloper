@@ -30,7 +30,7 @@ region = "ap-southeast-2"
 template = "packaged-prod.yaml"
 fail_on_empty_changeset = false
 capabilities = "CAPABILITY_IAM"
-parameter_overrides = "Stage=\"prod\""
+parameter_overrides = "Stage=prod"
 
 # ############################################## #
 
