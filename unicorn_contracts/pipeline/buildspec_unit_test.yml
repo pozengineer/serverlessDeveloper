@@ -3,16 +3,10 @@ phases:
   install:
     runtime-versions:
       python: 3.9
-      nodejs: 18
-        - npm install -g typescript
     commands:
       - cd "${PROJECT_SUBFOLDER}"
       - pip install poetry
       - poetry install
   build:
     commands:
-      - cd "${PROJECT_SUBFOLDER}"
-      - npm install
-      - echo 'Running unit tests'
-      - POWERTOOLS_TRACE_ENABLED=false npm test
       - poetry run pytest tests/unit/
